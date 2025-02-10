@@ -1,6 +1,7 @@
 package org.Rifqi;
 
 import org.Rifqi.utils.ArraysNumber;
+import org.Rifqi.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         List<Integer> numbers = new ArrayList<>();
         String choice;
+        System.out.println(new StringUtils().reverseString("hello world"));
         do {
             System.out.println("input your number : ");
             while (!scanner.hasNextInt()) {
