@@ -32,7 +32,7 @@ public class Main {
         List<Integer> rotatedList = arraysNumber.rotate(numbers, 2);
 
         System.out.println("Your rotated Number :" + rotatedList);
-        System.out.println("Removed All Duplicate : " + arraysNumber.removeAllDuplicate(numbers));
+        System.out.println("Find All Duplicate : " + arraysNumber.findAllDuplicate(numbers));
         System.out.println("Is there Duplicate :" + arraysNumber.isDuplicate(numbers));
         System.out.println("Your Array without Duplicate :" + arraysNumber.removeDuplicate(numbers));
         System.out.println("Your Sorted Array :" + arraysNumber.sortArray(numbers, "desc"));

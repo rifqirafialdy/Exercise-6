@@ -67,14 +67,14 @@ public class ArraysNumber {
         return result;
     }
 
-    public List<Integer> removeAllDuplicate(List<Integer> list) {
+    public List<Integer> findAllDuplicate(List<Integer> list) {
         List<Integer> result = new ArrayList<>();
         HashMap<Integer, Integer> countOccurance = new HashMap<>();
         for (int num : list) {
             countOccurance.put(num, countOccurance.getOrDefault(num, 0) + 1);
         }
-        for (int num : list) {
-            if (countOccurance.get(num) == 1) {
+        for (int num : countOccurance.keySet()) {
+            if (countOccurance.get(num) > 1) {
                 result.add(num);
             }
         }
