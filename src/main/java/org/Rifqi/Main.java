@@ -30,8 +30,9 @@ public class Main {
         System.out.println("Your Number " + numbers);
         ArraysNumber arraysNumber = new ArraysNumber();
         List<Integer> rotatedList = arraysNumber.rotate(numbers, 2);
-
+        System.out.println(arraysNumber.checkTemperature(numbers));
         System.out.println("Your rotated Number :" + rotatedList);
+
         System.out.println("Find All Duplicate : " + arraysNumber.findAllDuplicate(numbers));
         System.out.println("Is there Duplicate :" + arraysNumber.isDuplicate(numbers));
         System.out.println("Your Array without Duplicate :" + arraysNumber.removeDuplicate(numbers));
