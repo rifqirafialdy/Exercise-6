@@ -1,17 +1,39 @@
 package org.Rifqi;
 
+import org.Rifqi.utils.ArraysNumber;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        List<Integer> numbers = new ArrayList<>();
+        String choice;
+        do {
+            System.out.println("input your number : ");
+            while (!scanner.hasNextInt()) {
+                System.out.println("Invalid Input please put number");
+                scanner.next();
+
+            }
+            numbers.add(scanner.nextInt());
+            System.out.println("Do u want to Continue? (y/n)");
+            choice = scanner.next().toLowerCase();
+        } while (choice.equalsIgnoreCase("y"));
+        scanner.close();
+        System.out.println("Your Number " + numbers);
+        ArraysNumber arraysNumber = new ArraysNumber();
+        List<Integer> rotatedList = arraysNumber.rotate(numbers, 2);
+
+        System.out.println("Your rotated Number :" + rotatedList);
+        System.out.println("Is there Duplicate :" + arraysNumber.isDuplicate(numbers));
+
+
     }
 }
